@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "9ca61eea-75ed-4a7d-a6f5-1214d57b385f",
+		"name": "running_log_api",
+		"description": "API for adding different types of runs to users",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "checkHealthGet",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8081/checkHealth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"checkHealth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckHealthPost",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Test\": \"Hello\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/checkHealth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"checkHealth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateUser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Chris\",\n\t\"lastName\": \"Jantzen\",\n\t\"age\": 21,\n\t\"weight\": 140,\n\t\"height\": \"5'11\\\"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDistanceRun",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"distance\": \"3.44mi\",\n\t\"time\": \"24:28\",\n\t\"pace\": \"7'07\\\"/mi\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/distanceRun",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"distanceRun"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateDistanceRunToUser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/distanceRun/5c2436b6ecb220e29ce14a5b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"distanceRun",
+						"5c2436b6ecb220e29ce14a5b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
