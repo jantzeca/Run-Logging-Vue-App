@@ -73,7 +73,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"firstName\": \"Chris\",\n\t\"lastName\": \"Jantzen\",\n\t\"age\": 21,\n\t\"weight\": 140,\n\t\"height\": \"5'11\\\"\"\n}"
+					"raw": "{\n\t\"firstName\": \"jeaoeu\",\n\t\"lastName\": \"aoeuzen\",\n\t\"age\": 234,\n\t\"weight\": 130,\n\t\"height\": \"5'4\\\"\"\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8081/user",
@@ -138,6 +138,108 @@
 					"path": [
 						"distanceRun",
 						"5c2436b6ecb220e29ce14a5b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteUser",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/5c2d401bd4eae2849b7a4454",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"5c2d401bd4eae2849b7a4454"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/5c268a00969f82224133328c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"5c268a00969f82224133328c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllUsers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8081/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"firstName\": \"Chris\",\n\t\"lastName\": \"Jantzen\",\n\t\"age\": 21,\n\t\"gender\": \"Male\",\n\t\"weight\": 140,\n\t\"height\": \"5'11\\\"\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8081/user/5c268a00969f82224133328c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user",
+						"5c268a00969f82224133328c"
 					]
 				}
 			},

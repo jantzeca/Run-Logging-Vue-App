@@ -8,6 +8,12 @@ const routes = app => {
 
   app.route('/user')
     .post(userController.createUser)
+    .get(userController.getAllUsers)
+
+  app.route('/user/:userId')
+    .get(userController.getUserById)
+    .delete(userController.deleteUser)
+    .put(userController.updateUser)
 
   app.route('/distanceRun')
     .post(distanceRunController.addDistanceRun)

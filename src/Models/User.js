@@ -13,6 +13,10 @@ const UserSchema = new Schema({
     type: Number,
     required: 'Must enter an age'
   },
+  gender: {
+    type: String,
+    required: 'Add your gender'
+  },
   weight: {
     type: Number
   },
