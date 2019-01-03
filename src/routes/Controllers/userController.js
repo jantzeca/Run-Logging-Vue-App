@@ -11,7 +11,7 @@ const createUser = (req, res) => {
       firstName: user.firstName,
       lastName: user.lastName,
       age: user.age,
-      gender: user.sex,
+      gender: user.gender,
       weight: user.weight,
       height: user.height,
       id: user._id
@@ -62,7 +62,7 @@ const deleteUser = (req, res) => {
 
 // Update User
 const updateUser = (req, res) => {
-  User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true }, (err, user) => {
+  User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true, runValidators: true }, (err, user) => {
     err ? res.send(err) : res.json({
       firstName: user.firstName,
       lastName: user.lastName,

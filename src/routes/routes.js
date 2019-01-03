@@ -15,10 +15,8 @@ const routes = app => {
     .delete(userController.deleteUser)
     .put(userController.updateUser)
 
-  app.route('/distanceRun')
-    .post(distanceRunController.addDistanceRun)
-
-  app.route('/distanceRun/:id')
+  app.route('/distanceRun/:userId')
+    .put(distanceRunController.addDistanceRunToUser)
     .get(distanceRunController.getDistanceRunByUser)
 
   /**
