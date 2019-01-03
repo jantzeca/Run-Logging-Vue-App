@@ -17,7 +17,7 @@ const routes = app => {
 
   app.route('/distanceRun/:userId')
     .put(distanceRunController.addDistanceRunToUser)
-    .get(distanceRunController.getDistanceRunByUser)
+    // .get(distanceRunController.getDistanceRunByUser)
 
   /**
    * Add a route to get all runs done by a user

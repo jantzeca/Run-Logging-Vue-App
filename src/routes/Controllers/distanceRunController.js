@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
 const DistanceRunSchema = require('../../Models/DistanceRun').DistanceRunSchema
-const UserSchema = require('../../Models/User').UserSchema
+// const UserSchema = require('../../Models/User').UserSchema
 
 const DistanceRun = mongoose.model('DistanceRun', DistanceRunSchema)
-const User = mongoose.model('User', UserSchema)
+// const User = mongoose.model('User', UserSchema)
 
 
 /**
@@ -40,5 +40,5 @@ const addDistanceRunToUser = (req, res) => {
 
 module.exports = {
   addDistanceRunToUser,
-  getDistanceRunByUser
+  // getDistanceRunByUser
 }
