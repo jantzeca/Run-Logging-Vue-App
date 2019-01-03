@@ -23,7 +23,6 @@ const routes = app => {
 
   /**
    * Add a route to get all runs done by a user
-   *   Need to generate an id to be attatched to a user?
    */
 }
 
