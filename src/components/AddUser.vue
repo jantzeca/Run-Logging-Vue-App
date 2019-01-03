@@ -1,6 +1,14 @@
 <template>
   <div class="AddUser">
-    <h1>{{title}}</h1>
+    <b-navbar type="light" variant="light">
+      <b-navbar-brand>{{title}}</b-navbar-brand>
+    </b-navbar>
+    <ul id="infoList">
+      <li v-for="(info, index) in inputInfo" :key="index">
+        {{info}}
+        <input type="text">
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -9,11 +17,19 @@ export default {
   name: 'AddUser',
   data() {
     return {
-      title: 'AddUser'
+      title: 'AddUser',
+      inputInfo: [
+        'First Name',
+        'Last Name',
+        'Age',
+        'Gender',
+        'Weight',
+        'Height'
+      ]
     }
   },
   methods: {
-    
+
   }
 }
 </script>
@@ -22,7 +38,9 @@ export default {
 .AddUser {
   font-family: "Avenir", "Menlo", "Monaco";
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+#infoList {
+  list-style-type: none;
 }
 </style>

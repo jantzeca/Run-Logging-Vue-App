@@ -19,7 +19,7 @@ const createUser = (req, res) => {
   })
 }
 
-// Get Users *** Look into adding security to routes like this route ***
+// Get Users *** Look into adding security to routes like this one ***
 const getAllUsers  = (req, res) => {
   User.find({}, (err, users) => {
     let info = {}
