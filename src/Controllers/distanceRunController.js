@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const DistanceRunSchema = require('../../Models/DistanceRun').DistanceRunSchema
+const DistanceRunSchema = require('../Models/DistanceRun').DistanceRunSchema
 // const UserSchema = require('../../Models/User').UserSchema
 
 const DistanceRun = mongoose.model('DistanceRun', DistanceRunSchema)

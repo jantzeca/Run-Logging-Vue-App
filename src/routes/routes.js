@@ -1,6 +1,6 @@
-const checkHealthController = require('./Controllers/checkHealthController')
-const distanceRunController = require('./Controllers/distanceRunController')
-const userController = require('./Controllers/userController')
+const checkHealthController = require('../Controllers/checkHealthController')
+const distanceRunController = require('../Controllers/distanceRunController')
+const userController = require('../Controllers/userController')
 
 const routes = app => {
   app.route('/checkHealth')

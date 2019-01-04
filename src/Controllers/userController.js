@@ -1,21 +1,14 @@
 const mongoose = require('mongoose')
-const UserSchema = require('../../Models/User').UserSchema
+const userRepository = require('../Repositories/userRepository')
+const UserSchema = require('../Models/User').UserSchema
 
 const User = mongoose.model('User', UserSchema)
 
 const createUser = (req, res) => {
   let newUser = new User(req.body)
 
-  newUser.save((err, user) => {
-    err ? res.send(err) : res.json({
-      firstName: user.firstName,
-      lastName: user.lastName,
-      age: user.age,
-      gender: user.gender,
-      weight: user.weight,
-      height: user.height,
-      id: user._id
-    })
+  userRepository.createUser(newUser, (err, result) => {
+    err ? res.send(err) : res.json(result)
   })
 }
 
