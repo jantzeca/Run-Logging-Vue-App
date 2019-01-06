@@ -1,7 +1,7 @@
 <template>
   <div class="AddUser">
     <b-navbar type="light" variant="light">
-      <b-navbar-brand>{{title}}</b-navbar-brand>
+      <b-navbar-brand href="/">Run Logging</b-navbar-brand>
     </b-navbar>
     <form v-on:submit="addUser" class="inputForm">
       <div class="inputInfo">
@@ -40,6 +40,8 @@
 </template>
 
 <script>
+// const userRepository = require('../../core/Repositories/userRepository')
+
 export default {
   name: 'AddUser',
   data() {
@@ -69,6 +71,14 @@ export default {
   methods: {
     addUser: function(e) {
       e.preventDefault()
+      // userRepository.createUser({
+      //   firstName: this.newUser.firstName,
+      //   lastName: this.newUser.lastName,
+      //   age: this.newUser.age,
+      //   gender: this.newUser.gender,
+      //   weight: this.newUser.weight,
+      //   height: this.newUser.height
+      // })
       this.users.push({
         firstName: this.newUser.firstName,
         lastName: this.newUser.lastName,

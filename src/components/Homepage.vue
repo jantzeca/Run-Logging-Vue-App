@@ -6,6 +6,9 @@
       variant="light"
     >
       <b-navbar-brand href="/">Running Log</b-navbar-brand>
+      <b-nav fill>
+        <b-nav-item href="/addUser">Sign Up</b-nav-item>
+      </b-nav>
     </b-navbar>
   </div>
 </template>
