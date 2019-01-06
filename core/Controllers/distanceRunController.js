@@ -1,7 +1,6 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
-const DistanceRunSchema = require('../Models/DistanceRun').DistanceRunSchema
-// const UserSchema = require('../../Models/User').UserSchema
+import DistanceRunSchema from '../Models/DistanceRun'
 
 const DistanceRun = mongoose.model('DistanceRun', DistanceRunSchema)
 // const User = mongoose.model('User', UserSchema)
@@ -11,7 +10,7 @@ const DistanceRun = mongoose.model('DistanceRun', DistanceRunSchema)
  * Need to get the user that goes with the request
  * Push this new distance run to the end of the array of distance runs
  */
-const addDistanceRunToUser = (req, res) => {
+export function addDistanceRunToUser (req, res) {
   let newRun = new DistanceRun(req.body)
 
   newRun.save((err, run) => {
@@ -38,7 +37,7 @@ const addDistanceRunToUser = (req, res) => {
 
 
 
-module.exports = {
-  addDistanceRunToUser,
-  // getDistanceRunByUser
-}
+// module.exports = {
+//   addDistanceRunToUser,
+//   // getDistanceRunByUser
+// }

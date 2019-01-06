@@ -1,4 +1,5 @@
-const Schema = require('mongoose').Schema
+
+import { Schema } from 'mongoose'
 
 // Possibly add support for bulk api with the option for array of objects
 
@@ -16,6 +17,7 @@ const DistanceRunSchema = new Schema({
   }
 })
 
-module.exports = {
-  DistanceRunSchema
-}
+export default DistanceRunSchema
+// module.exports = {
+//   DistanceRunSchema
+// }

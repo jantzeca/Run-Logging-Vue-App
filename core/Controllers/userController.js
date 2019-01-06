@@ -4,7 +4,7 @@ const UserSchema = require('../Models/User').UserSchema
 
 const User = mongoose.model('User', UserSchema)
 
-const createUser = (req, res) => {
+export function createUser(req, res) {
   let newUser = new User(req.body)
 
   userRepository.createUser(newUser, (err, result) => {
@@ -13,7 +13,7 @@ const createUser = (req, res) => {
 }
 
 // Get Users *** Look into adding security to routes like this one ***
-const getAllUsers  = (req, res) => {
+export function getAllUsers (req, res) {
   User.find({}, (err, users) => {
     let info = {}
     for (let user of users) {
@@ -32,7 +32,7 @@ const getAllUsers  = (req, res) => {
 }
 
 // Get User by ID
-const getUserById = (req, res) => {
+export function getUserById (req, res) {
   User.findById(req.params.userId, (err, user) => {
     err ? res.send(err) : res.json({
       firstName: user.firstName,
@@ -47,14 +47,14 @@ const getUserById = (req, res) => {
 }
 
 // Delete User
-const deleteUser = (req, res) => {
+export function deleteUser(req, res) {
   User.deleteOne({ _id: req.params.userId }, err => {
     err ? res.send(err) : res.json({ message: 'Successfully deleted user'})
   })
 }
 
 // Update User
-const updateUser = (req, res) => {
+export function updateUser(req, res) {
   User.findOneAndUpdate({ _id: req.params.userId }, req.body, { new: true, runValidators: true }, (err, user) => {
     err ? res.send(err) : res.json({
       firstName: user.firstName,
@@ -68,10 +68,10 @@ const updateUser = (req, res) => {
   })
 }
 
-module.exports = {
-  createUser,
-  getAllUsers,
-  getUserById,
-  deleteUser,
-  updateUser
-}
+// module.exports = {
+//   createUser,
+//   getAllUsers,
+//   getUserById,
+//   deleteUser,
+//   updateUser
+// }

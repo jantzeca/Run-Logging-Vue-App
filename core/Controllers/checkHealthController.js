@@ -1,8 +1,8 @@
 
-const healthTest = (req, res) => {
+export function healthTest(req, res) {
   res.status(200).send('Success')
 }
-
-module.exports = {
-  healthTest
-}
+//
+// module.exports = {
+//   healthTest
+// }

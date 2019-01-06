@@ -1,4 +1,5 @@
-const Schema = require('mongoose').Schema
+
+import { Schema } from 'mongoose'
 
 const UserSchema = new Schema({
   firstName: {
@@ -25,6 +26,8 @@ const UserSchema = new Schema({
   }
 })
 
-module.exports = {
-  UserSchema
-}
+
+export default UserSchema
+// module.exports = {
+//   UserSchema
+// }

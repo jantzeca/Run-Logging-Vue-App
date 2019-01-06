@@ -1,5 +1,5 @@
 
-const app = require('./expressApp').expressApp
+import app from './expressApp'
 
 const PORT = 8081
 app.listen(PORT, () => {

@@ -1,29 +1,25 @@
-const checkHealthController = require('../Controllers/checkHealthController')
-const distanceRunController = require('../Controllers/distanceRunController')
-const userController = require('../Controllers/userController')
+import { healthTest } from '../Controllers/checkHealthController'
+import { addDistanceRunToUser } from '../Controllers/distanceRunController'
+import { createUser, getAllUsers, getUserById, deleteUser, updateUser } from '../Controllers/userController'
 
-const routes = app => {
+export function routes(app) {
   app.route('/checkHealth')
-    .get(checkHealthController.healthTest)
+    .get(healthTest)
 
   app.route('/user')
-    .post(userController.createUser)
-    .get(userController.getAllUsers)
+    .post(createUser)
+    .get(getAllUsers)
 
   app.route('/user/:userId')
-    .get(userController.getUserById)
-    .delete(userController.deleteUser)
-    .put(userController.updateUser)
+    .get(getUserById)
+    .delete(deleteUser)
+    .put(updateUser)
 
   app.route('/distanceRun/:userId')
-    .put(distanceRunController.addDistanceRunToUser)
+    .put(addDistanceRunToUser)
     // .get(distanceRunController.getDistanceRunByUser)
 
   /**
    * Add a route to get all runs done by a user
    */
-}
-
-module.exports = {
-  routes
 }
