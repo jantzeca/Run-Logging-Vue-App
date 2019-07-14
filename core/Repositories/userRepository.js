@@ -23,9 +23,6 @@ const createUser = (userInfo, callback) => {
   })
 }
 
-// Need to figure out how to use export default here to be able to use it in the
-// vue script
-
 module.exports = {
   createUser
 }
